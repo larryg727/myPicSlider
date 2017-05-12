@@ -1,0 +1,34 @@
+#sliderContainer { /*entire slider container*/
+    width: 100%;
+    position: relative;
+}
+
+#picContainer {
+    width: 60%;    /*sets the max size of pics*/
+    margin: 0 auto;
+}
+
+.slides {
+    width: 100%;
+    display: none;
+}
+
+#navLeft {
+    font-size: 70px;
+}
+
+#prev {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+
+#navRight {
+    font-size: 70px;
+}
+
+#next {
+    position: absolute;
+    top: 45%;
+    right: 15%;
+}
