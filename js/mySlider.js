@@ -22,9 +22,12 @@ $(document).ready(function () {
     }
 
     //will pause autoplay on hover and restart on enter
-    $(".picInfoContainer").hover(function(){
-        clearInterval(playing);
-    }, autoPlay());
+    $("#slide-1, #slide-2, #slide-3, #slide-4").hover(function(){
+        stop();
+    }, function(){
+        play = true;
+        autoPlay();
+    });
 
     // currently not used  tracking current with counters keep case of future need
     function currentSlide(){
@@ -77,5 +80,9 @@ $(document).ready(function () {
             }, speed);
     }
 
+        // to stop auto play
+    function stop(){
+        clearInterval(playing);
+    }
 
 });
