@@ -17,17 +17,16 @@ $(document).ready(function () {
     $(slideVar + initial).fadeIn();   // initial picture shown
 
     // will play slides if play is true
-    if(play){
+    if(play) {
         autoPlay();
+        //will pause autoplay on hover and restart on enter
+        $("#slide-1, #slide-2, #slide-3, #slide-4").hover(function () {
+            stop();
+        }, function () {
+            play = true;
+            autoPlay();
+        });
     }
-
-    //will pause autoplay on hover and restart on enter
-    $("#slide-1, #slide-2, #slide-3, #slide-4").hover(function(){
-        stop();
-    }, function(){
-        play = true;
-        autoPlay();
-    });
 
     // currently not used  tracking current with counters keep case of future need
     function currentSlide(){
